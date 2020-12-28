@@ -56,9 +56,9 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 - [ ] Add the instance variables that will be used later on
 
 ```typescript
-    private element: ElementRef;
-    private currentAnimation;
-```
+  private element: ElementRef;
+  private currentAnimation: Animation;
+    ```
 
 - [ ] Edit the constructor
 
