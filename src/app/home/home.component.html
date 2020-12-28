@@ -3,5 +3,26 @@
 </ActionBar>
 
 <GridLayout>
-    <!-- Add your page content here -->
+    <ScrollView>
+        <StackLayout class="container">
+            <StackLayout nsTouchScaleAnimation class="cards"
+                (tap)="onCardTap(1)">
+                <Image src="~/images/img1.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+            <StackLayout nsTouchScaleAnimation class="cards"
+                (tap)="onCardTap(2)">
+                <Image src="~/images/img2.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+            <StackLayout nsTouchScaleAnimation class="cards"
+                (tap)="onCardTap(3)">
+                <Image src="~/images/img3.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
 </GridLayout>
