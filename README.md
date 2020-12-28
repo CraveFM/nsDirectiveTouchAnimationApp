@@ -36,9 +36,79 @@ const copyTargets = [
   ];
 ```
 
+## :a: TouchScaleAnimation Directive
 
 https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
 
 ```
 > The basic difference between a component and a directive is that a component has a template, whereas an attribute or structural directive does not have a template.
 ```
+
+- [ ] Generate the directive
+
+```
+$ ng generate directive directives/TouchScaleAnimation --skip-tests=true
+```
+
+
+:round_pushpin: in the `TouchScaleAnimationDirective` `Class`
+
+- [ ] Add the instance variables that will be used later on
+
+```typescript
+    private element: ElementRef;
+    private currentAnimation;
+```
+
+- [ ] Edit the constructor
+
+```typescript
+    constructor(el: ElementRef) {
+        this.element = el;
+    }
+```
+
+- [ ] implement the private methods that will be used later on
+
+
+```typescript
+    private animatePressed(): void {
+        if (this.currentAnimation) {
+            this.currentAnimation.cancel();
+        }
+        this.currentAnimation = this.element.nativeElement.animate({
+            scale: { x: 0.98, y: 0.98 },
+            opacity: 0.8,
+            curve: AnimationCurve.easeIn,
+            duration: 100
+        }).catch(e => {});
+    }
+
+    private animateReleased(): void {
+        if (this.currentAnimation) {
+            this.currentAnimation.cancel();
+        }
+        this.currentAnimation = this.element.nativeElement.animate({
+            scale: { x: 1, y: 1 },
+            opacity: 1,
+            curve: AnimationCurve.easeIn,
+            duration: 100
+        }).catch(e => {});
+    }
+```
+
+
+
+- [ ] implement the `@HostListener` `Decorator` and add its method
+
+```typescript
+    @HostListener('touch', ['$event'])
+    onTouch(args: TouchGestureEventData): void {
+        if (args.action === 'down') {
+            this.animatePressed();
+        } else if (args.action === 'up') {
+            this.animateReleased();
+        }
+    }
+```
+
