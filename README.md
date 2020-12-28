@@ -148,11 +148,10 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 
 - [ ] Let finish with the XML template
 
-* replace the current `<GridLayout>` with a more sophisticated one
+* In the current `<GridLayout>` replace the comment `<!-- Add your page content here -->` with
 
 
 ```xml
-<GridLayout>
     <ScrollView>
         <StackLayout class="container">
             <StackLayout appTouchScaleAnimation class="cards"
@@ -175,5 +174,4 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 
         </StackLayout>
     </ScrollView>
-</GridLayout>
 ```
