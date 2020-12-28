@@ -112,3 +112,51 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
     }
 ```
 
+## :b: Home Component
+
+:round_pushpin: Styles
+
+- [ ] Add the `styleUrls` operator to the `@Component` decorator
+
+```typescript
+@Component({
+    selector: "Home",
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.css"]
+})
+```
+
+- [ ] Let's add a new `home.component.css` stylesheet and add the following stylesheet classes
+
+```css
+.container {
+    font-size: 20;
+    background-color: #D0CCE0;
+    padding: 10 0;
+}
+
+.cards {
+    margin: 4 20;
+    background-color: #fff;
+    padding: 20;
+    border-radius: 10;
+}
+```
+
+
+:round_pushpin: Template
+
+- [ ] Let finish with the XML template
+
+* replace the current `<ActionBar>`
+
+```xml
+<ActionBar class="action-bar">
+    <Label text="Gestures 👌"></Label>
+</ActionBar>
+```
+
+* replace the current `<GridLayout>` with a more sophisticated one
+
+
+```xml
