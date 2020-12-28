@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
-import { TouchGestureEventData } from '@nativescript/core';
+import { TouchGestureEventData, View } from '@nativescript/core';
 import { AnimationCurve } from '@nativescript/core/ui/enums';
 
 @Directive({
@@ -7,44 +7,40 @@ import { AnimationCurve } from '@nativescript/core/ui/enums';
 })
 export class TouchScaleAnimationDirective {
 
-  private element: ElementRef;
-  private currentAnimation: Animation;
+  private view: View;
+  private duration: number; 
 
   constructor(el: ElementRef) {
-    this.element = el;
+    this.view = el.nativeElement;
+    this.duration = 0;
   }
 
   private animatePressed(): void {
-    if (this.currentAnimation) {
-        this.currentAnimation.cancel();
+    let view: View = this.view;
+    view.animate({ opacity: 0, duration: this.duration })
+      .then(() => view.animate({ scale: { x: 0.98, y: 0.98 }, duration: this.duration }))
+      .then(() => view.animate({ opacity: 0.8, duration: this.duration }))
+      .then(() => view.animate({ curve: AnimationCurve.easeIn, duration: this.duration } ))
+      .catch((e) => { console.log(e.message); } );
     }
-    this.currentAnimation = this.element.nativeElement.animate({
-        scale: { x: 0.98, y: 0.98 },
-        opacity: 0.8,
-        curve: AnimationCurve.easeIn,
-        duration: 100
-    }).catch(() => {});
-  }
 
   private animateReleased(): void {
-      if (this.currentAnimation) {
-          this.currentAnimation.cancel();
-      }
-      this.currentAnimation = this.element.nativeElement.animate({
-          scale: { x: 1, y: 1 },
-          opacity: 1,
-          curve: AnimationCurve.easeIn,
-          duration: 100
-      }).catch(() => {});
+    let view: View = this.view;
+    view.animate({ opacity: 0, duration: this.duration })
+      .then(() => view.animate({ scale: { x: 1, y: 1 }, duration: this.duration }))
+      .then(() => view.animate({ opacity: 1, duration: this.duration }))
+      .then(() => view.animate({ curve: AnimationCurve.easeIn, duration: this.duration } ))
+      .catch((e) => { console.log(e.message); } );
   }
 
   @HostListener('touch', ['$event'])
   onTouch(args: TouchGestureEventData): void {
-      if (args.action === 'down') {
-          this.animatePressed();
-      } else if (args.action === 'up') {
-          this.animateReleased();
-      }
+    // console.log('action: ' + args.action);
+    if (args.action === 'down') {
+        this.animatePressed();
+    } else if (args.action === 'up') {
+        this.animateReleased();
+    }
   }
 
 }
