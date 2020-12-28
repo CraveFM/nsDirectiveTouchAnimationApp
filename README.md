@@ -175,3 +175,14 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
         </StackLayout>
     </ScrollView>
 ```
+
+:round_pushpin: `HomeComponent` Class
+
+- [ ] in the HomeComponent `Class`, add the method associated with the gestures
+
+```typescript
+    onCardTap(index: number): void {
+        console.log('card tap', index);
+    }
+```
+
