@@ -148,15 +148,32 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 
 - [ ] Let finish with the XML template
 
-* replace the current `<ActionBar>`
-
-```xml
-<ActionBar class="action-bar">
-    <Label text="Gestures 👌"></Label>
-</ActionBar>
-```
-
 * replace the current `<GridLayout>` with a more sophisticated one
 
 
 ```xml
+<GridLayout>
+    <ScrollView>
+        <StackLayout class="container">
+            <StackLayout appTouchScaleAnimation class="cards"
+                (tap)="onCardTap(1)">
+                <Image src="~/assets/img1.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+            <StackLayout appTouchScaleAnimation class="cards"
+                (tap)="onCardTap(2)">
+                <Image src="~/assets/img2.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+            <StackLayout appTouchScaleAnimation class="cards"
+                (tap)="onCardTap(3)">
+                <Image src="~/assets/img3.png" width="200"
+                    stretch="aspectFit"></Image>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
+```
