@@ -128,7 +128,7 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 
 - [ ] Let's add a new `home.component.css` stylesheet and add the following stylesheet classes
 
-```css
+```scss
 .container {
     font-size: 20;
     background-color: #D0CCE0;
