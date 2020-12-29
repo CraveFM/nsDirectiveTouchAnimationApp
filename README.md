@@ -13,6 +13,35 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
+:bulb: This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
+
+```typescript
+@NgModule({
+    imports: [
+        NativeScriptCommonModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        TouchScaleAnimationDirective
+...
+```
+
+it needs to be moved to the `Home` Module Class
+
+```typescript
+@NgModule({
+    imports: [
+        NativeScriptCommonModule,
+        HomeRoutingModule
+    ],
+    declarations: [
+        HomeComponent,
+        TouchScaleAnimationDirective
+...
+```
+
+
 :o: Setup 
 
 - [ ] Create a `NSPlayground` directory 
