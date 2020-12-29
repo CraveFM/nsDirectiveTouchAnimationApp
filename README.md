@@ -1,7 +1,7 @@
 
+# Apple Card 3D App
 
-
-[Animations using Angular Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
+[<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49) Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
 
 
 ```
