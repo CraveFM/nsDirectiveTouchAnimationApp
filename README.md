@@ -1,6 +1,9 @@
 
 
 
+[Animations using Angular Directives](https://nativescripting.com/posts/animations-using-angular-directives)
+
+
 ```
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
