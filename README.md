@@ -44,7 +44,7 @@ const copyTargets = [
   ];
 ```
 
-## :a: TouchScaleAnimation Directive
+## :a: TouchScaleAnimation Attribute Directive
 
 https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
 
@@ -193,10 +193,14 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
     }
 ```
 
-## :ab: Structural Directive
+## :ab: ActionBar Structural Directive
 
-https://docs.nativescript.org/angular/ui/ng-components/ng-directives
+We will follow the {N} [Ng Directives](https://docs.nativescript.org/angular/ui/ng-components/ng-directives) example and change the `ActionBar` of the `HomeComponent` template
 
+
+:round_pushpin: Structural Directives
+
+- [ ] Generate the directives for `Android` and `iOS`
 
 ```
 $ ng generate directive directives/ifAndroid --skip-tests=true
@@ -204,4 +208,24 @@ $ ng generate directive directives/ifAndroid --skip-tests=true
 
 ```
 $ ng generate directive directives/ifIos --skip-tests=true
+```
+
+- [ ] CHange the constructors
+
+change the constructor from :
+
+```typescript
+  constructor() { }
+```
+
+to : 
+
+:bulb: change the platform accordingly for testing `iOS` it's `isIOS` and `Android` it's `isAndroid`
+
+```typescript
+  constructor(container: ViewContainerRef, templateRef: TemplateRef<View>) {
+    if (isIOS) {
+        container.createEmbeddedView(templateRef);
+    }
+  }
 ```
