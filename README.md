@@ -193,3 +193,6 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
     }
 ```
 
+## :ab: Structural Directive
+
+https://docs.nativescript.org/angular/ui/ng-components/ng-directives
