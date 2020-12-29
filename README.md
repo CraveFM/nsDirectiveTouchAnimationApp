@@ -84,7 +84,7 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
       .then(() => view.animate({ opacity: 0.8, duration: this.duration }))
       .then(() => view.animate({ curve: AnimationCurve.easeIn, duration: this.duration } ))
       .catch((e) => { console.log(e.message); } );
-    }
+   }
 
   private animateReleased(): void {
     let view: View = this.view;
