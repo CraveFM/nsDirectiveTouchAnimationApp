@@ -13,7 +13,7 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:construction: Visibility Issue!
+#### :construction: Visibility Issue!
 
 This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
 
