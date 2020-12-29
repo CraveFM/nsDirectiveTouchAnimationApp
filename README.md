@@ -262,3 +262,46 @@ to :
     }
   }
 ```
+
+:round_pushpin: `HomeComponent` Template
+
+
+- [ ] `Font Awesome` Fonts
+
+* locate and copy the `fonts` folder to the `src` directory
+
+```
+$ cp -r fonts src/fonts
+```
+
+- [ ] `Font Awesome` Settings
+
+* In the `app.css` file, add the `fonts` `.fa` class
+
+```css
+.fa {
+    font-family: 'FontAwesome'
+  }
+
+```
+
+- [ ] `HomeCOmponent` Action Bar
+
+* In the `home.component.html` file change the `Label` tag in the `ActionBar` tag from :
+
+```xml
+<ActionBar>
+    <Label text="Home"></Label>
+</ActionBar>
+```
+
+to :
+
+```xml
+<ActionBar>
+    <Label *nsIfAndroid text="&#xf17b;" class="fa t-36"></Label>
+    <Label *nsIfIos     text="&#xf179;" class="fa t-36"></Label>
+</ActionBar>
+```
+
+:bulb: You ccan notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
