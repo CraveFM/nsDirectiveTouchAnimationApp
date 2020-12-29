@@ -4,6 +4,9 @@ import { TouchScaleAnimationDirective } from "../directives/touch-scale-animatio
 import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 
+import { IfAndroidDirective } from "../directives/if-android.directive";
+import { IfIosDirective } from "../directives/if-ios.directive";
+
 @NgModule({
     imports: [
         NativeScriptCommonModule,
@@ -11,7 +14,9 @@ import { HomeComponent } from "./home.component";
     ],
     declarations: [
         HomeComponent,
-        TouchScaleAnimationDirective
+        TouchScaleAnimationDirective,
+        IfAndroidDirective,
+        IfIosDirective
     ],
     schemas: [
         NO_ERRORS_SCHEMA
