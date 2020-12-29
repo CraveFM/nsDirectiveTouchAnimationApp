@@ -158,19 +158,19 @@ $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 ```xml
     <ScrollView>
         <StackLayout class="container">
-            <StackLayout appTouchScaleAnimation class="cards"
+            <StackLayout [nsTouchScaleAnimation] class="cards"
                 (tap)="onCardTap(1)">
                 <Image src="~/images/img1.png" width="200"
                     stretch="aspectFit"></Image>
             </StackLayout>
 
-            <StackLayout appTouchScaleAnimation class="cards"
+            <StackLayout [nsTouchScaleAnimation] class="cards"
                 (tap)="onCardTap(2)">
                 <Image src="~/images/img2.png" width="200"
                     stretch="aspectFit"></Image>
             </StackLayout>
 
-            <StackLayout appTouchScaleAnimation class="cards"
+            <StackLayout [nsTouchScaleAnimation] class="cards"
                 (tap)="onCardTap(3)">
                 <Image src="~/images/img3.png" width="200"
                     stretch="aspectFit"></Image>
