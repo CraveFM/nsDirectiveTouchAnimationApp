@@ -3,7 +3,6 @@ import { NativeScriptModule } from "@nativescript/angular";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { TouchScaleAnimationDirective } from "./directives/touch-scale-animation.directive";
 
 @NgModule({
     bootstrap: [
@@ -14,8 +13,7 @@ import { TouchScaleAnimationDirective } from "./directives/touch-scale-animation
         AppRoutingModule
     ],
     declarations: [
-        AppComponent,
-        TouchScaleAnimationDirective
+        AppComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

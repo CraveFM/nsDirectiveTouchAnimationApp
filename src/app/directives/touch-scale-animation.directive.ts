@@ -9,6 +9,7 @@ export class TouchScaleAnimationDirective {
 
   private view: View;
   private duration: number; 
+  private currentAnimation;
 
   constructor(el: ElementRef) {
     this.view = el.nativeElement;
@@ -17,7 +18,10 @@ export class TouchScaleAnimationDirective {
 
   private animatePressed(): void {
     let view: View = this.view;
-    view.animate({ opacity: 0, duration: this.duration })
+    if (this.currentAnimation) {
+      this.currentAnimation.cancel();
+    }
+    this.currentAnimation = view.animate({ opacity: 0, duration: this.duration })
       .then(() => view.animate({ scale: { x: 0.98, y: 0.98 }, duration: this.duration }))
       .then(() => view.animate({ opacity: 0.8, duration: this.duration }))
       .then(() => view.animate({ curve: AnimationCurve.easeIn, duration: this.duration } ))
@@ -26,7 +30,10 @@ export class TouchScaleAnimationDirective {
 
   private animateReleased(): void {
     let view: View = this.view;
-    view.animate({ opacity: 0, duration: this.duration })
+    if (this.currentAnimation) {
+      this.currentAnimation.cancel();
+    }
+    this.currentAnimation = view.animate({ opacity: 0, duration: this.duration })
       .then(() => view.animate({ scale: { x: 1, y: 1 }, duration: this.duration }))
       .then(() => view.animate({ opacity: 1, duration: this.duration }))
       .then(() => view.animate({ curve: AnimationCurve.easeIn, duration: this.duration } ))
@@ -35,7 +42,7 @@ export class TouchScaleAnimationDirective {
 
   @HostListener('touch', ['$event'])
   onTouch(args: TouchGestureEventData): void {
-    // console.log('action: ' + args.action);
+    console.log('action: ' + args.action);
     if (args.action === 'down') {
         this.animatePressed();
     } else if (args.action === 'up') {
