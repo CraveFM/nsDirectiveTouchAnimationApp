@@ -285,7 +285,7 @@ $ cp -r fonts src/fonts
 
 ```
 
-- [ ] `HomeCOmponent` Action Bar
+- [ ] `HomeComponent` Action Bar
 
 * In the `home.component.html` file change the `Label` tag in the `ActionBar` tag from :
 
