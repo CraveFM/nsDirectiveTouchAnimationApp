@@ -1,7 +1,7 @@
 
 
 
-[Animations using Angular Directives](https://nativescripting.com/posts/animations-using-angular-directives)
+[Animations using Angular Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
 
 
 ```
