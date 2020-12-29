@@ -1,10 +1,13 @@
 
 # Apple Card 3D App
 
-[<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49) Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
+[<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img>] Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
 
+[<img src="https://nativescripting.com/758edc112b99236de995159be8c7567b/directive-animation.gif" width="210" height="375"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49)
 
-https://nativescripting.com/758edc112b99236de995159be8c7567b/directive-animation.gif
+Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]() and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
+
+## :o: Create a project by using this template
 
 ```
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
