@@ -241,6 +241,8 @@ $ ng generate directive directives/ifAndroid --skip-tests=true
 $ ng generate directive directives/ifIos --skip-tests=true
 ```
 
+:bulb: [Visibility Issue](README.md#construction-visibility-issue)
+
 - [ ] CHange the constructors
 
 change the constructor from :
