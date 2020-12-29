@@ -13,7 +13,9 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:bulb: This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
+:construction: Visibility Issue!
+
+This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
 
 ```typescript
 @NgModule({
