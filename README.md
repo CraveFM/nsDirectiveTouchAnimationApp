@@ -13,37 +13,6 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-#### :construction: Visibility Issue!
-
-This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
-
-```typescript
-@NgModule({
-    imports: [
-        NativeScriptCommonModule,
-        AppRoutingModule
-    ],
-    declarations: [
-        AppComponent,
-        TouchScaleAnimationDirective
-...
-```
-
-it needs to be moved to the `Home` Module Class
-
-```typescript
-@NgModule({
-    imports: [
-        NativeScriptCommonModule,
-        HomeRoutingModule
-    ],
-    declarations: [
-        HomeComponent,
-        TouchScaleAnimationDirective
-...
-```
-
-
 :o: Setup 
 
 - [ ] Create a `NSPlayground` directory 
@@ -87,6 +56,35 @@ The basic difference between a component and a directive is that a component has
 $ ng generate directive directives/TouchScaleAnimation --skip-tests=true
 ```
 
+#### :construction: Visibility Issue!
+
+This will add the `TouchScaleAnimationDirective` class to the `App` Module Class, 
+
+```typescript
+@NgModule({
+    imports: [
+        NativeScriptCommonModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        TouchScaleAnimationDirective
+...
+```
+
+it needs to be moved to the `Home` Module Class
+
+```typescript
+@NgModule({
+    imports: [
+        NativeScriptCommonModule,
+        HomeRoutingModule
+    ],
+    declarations: [
+        HomeComponent,
+        TouchScaleAnimationDirective
+...
+```
 
 :round_pushpin: in the `TouchScaleAnimationDirective` `Class`
 
