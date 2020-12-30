@@ -357,6 +357,8 @@ to :
 
 :bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
 
+[\f17b Android Icon](https://fontawesome.com/icons/android)
+
 :x: Pipes
 
 https://nativescripting.com/posts/how-to-display-protected-images
