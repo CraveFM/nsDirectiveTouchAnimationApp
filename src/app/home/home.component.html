@@ -1,6 +1,10 @@
 <ActionBar>
-    <Label *nsIfAndroid text="&#xf17b;" class="fa t-36"></Label>
-    <Label *nsIfIos     text="&#xf179;" class="fa t-36"></Label>
+    <StackLayout orientation="horizontal">
+        <Image [src]="imageUrl | protectedImage | async" width="50" height="50"></Image>
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
 </ActionBar>
 
 <GridLayout>

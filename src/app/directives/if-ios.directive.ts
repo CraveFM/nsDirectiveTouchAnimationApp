@@ -1,15 +1,17 @@
-import { Directive, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { isIOS, View } from '@nativescript/core';
 
 @Directive({
   selector: '[nsIfIos]'
 })
-export class IfIosDirective {
+export class IfIosDirective implements OnInit {
 
-  constructor(container: ViewContainerRef, templateRef: TemplateRef<View>) {
+  ngOnInit() {
     if (isIOS) {
-        container.createEmbeddedView(templateRef);
+      this.container.createEmbeddedView(this.templateRef);
     }
   }
+
+  constructor(private container: ViewContainerRef, private templateRef: TemplateRef<View>) { }
 
 }

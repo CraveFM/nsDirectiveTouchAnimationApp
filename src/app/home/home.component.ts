@@ -7,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
 
+    imageUrl: string = "https://raw.githubusercontent.com/CraveFM/nsDirectiveTouchAnimationApp/main/src/images/angular.png";
+
     constructor() {
         // Use the component constructor to inject providers.
     }

@@ -1,15 +1,17 @@
-import { Directive, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { isAndroid, View } from '@nativescript/core';
 
 @Directive({
   selector: '[nsIfAndroid]'
 })
-export class IfAndroidDirective {
+export class IfAndroidDirective implements OnInit {
 
-  constructor(container: ViewContainerRef, templateRef: TemplateRef<View>) {
+  ngOnInit() {
     if (isAndroid) {
-      container.createEmbeddedView(templateRef);
+      this.container.createEmbeddedView(this.templateRef);
     }
   }
+
+  constructor(private container: ViewContainerRef, private templateRef: TemplateRef<View>) { }
 
 }

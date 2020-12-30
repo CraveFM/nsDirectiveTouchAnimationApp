@@ -6,6 +6,7 @@ import { HomeComponent } from "./home.component";
 
 import { IfAndroidDirective } from "../directives/if-android.directive";
 import { IfIosDirective } from "../directives/if-ios.directive";
+import { ProtectedImagePipe } from '../pipes/protected-image.pipe';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { IfIosDirective } from "../directives/if-ios.directive";
         HomeComponent,
         TouchScaleAnimationDirective,
         IfAndroidDirective,
-        IfIosDirective
+        IfIosDirective,
+        ProtectedImagePipe
     ],
     schemas: [
         NO_ERRORS_SCHEMA
