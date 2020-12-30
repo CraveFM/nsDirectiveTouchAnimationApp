@@ -269,12 +269,12 @@ to :
   }
 ```
 
-:round_pushpin: `HomeComponent` Template
+:gear: `Fonts` settings
 
 
 - [ ] `Font Awesome` Fonts
 
-* locate and copy the `fonts` folder to the `src` directory
+* download and copy the `fonts` folder to the `src` directory
 
 ```
 $ cp -r fonts src/fonts
@@ -290,6 +290,8 @@ $ cp -r fonts src/fonts
   }
 
 ```
+
+:round_pushpin: `HomeComponent` Template
 
 - [ ] `HomeComponent` Action Bar
 
