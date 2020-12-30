@@ -13,7 +13,7 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template https://github.com/CraveFM/nsDirectiveTouchAnimationApp
 ```
 
-## :a: Create a project from Scratch
+## :bookmark: Create a project from Scratch
 
 ```
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
@@ -50,7 +50,9 @@ const copyTargets = [
   ];
 ```
 
-### :one: TouchScaleAnimation Attribute Directive
+### :a: TouchScaleAnimation Attribute Directive
+
+### :m: The directives
 
 https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
 
@@ -154,7 +156,7 @@ it needs to be moved to the `Home` Module Class
   }
 ```
 
-### :two: Home Component
+### :m: Home Component
 
 :round_pushpin: Styles
 
