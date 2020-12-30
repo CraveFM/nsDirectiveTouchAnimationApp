@@ -251,7 +251,7 @@ $ ng generate directive directives/ifIos --skip-tests=true
 
 - [ ] Change the constructors
 
-change the constructor from :
+change the constructors from :
 
 ```typescript
   constructor() { }
@@ -259,15 +259,26 @@ change the constructor from :
 
 to : 
 
-:bulb: change the platform accordingly for testing `iOS` it's `isIOS` and `Android` it's `isAndroid`
+```typescript
+  constructor(private container: ViewContainerRef, private templateRef: TemplateRef<View>) { }
+```
+
+- [ ] Implements the 'OnInit' lifecycle along with its `ngOnInit()` method
 
 ```typescript
-  constructor(container: ViewContainerRef, templateRef: TemplateRef<View>) {
-    if (isIOS) {
-        container.createEmbeddedView(templateRef);
+....     implements OnInit {
+
+  ngOnInit() {
+    if (isAndroid) {
+      this.container.createEmbeddedView(this.templateRef);
     }
   }
 ```
+
+
+:bulb: change the platform accordingly for testing `iOS` it's `isIOS` and `Android` it's `isAndroid`
+
+
 
 :gear: `Fonts` settings
 
