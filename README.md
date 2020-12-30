@@ -188,7 +188,7 @@ it needs to be moved to the `Home` Module Class
 
 :round_pushpin: Template
 
-- [ ] Let finish with the XML template
+- [ ] Let's finish with the XML template
 
 * In the current `<GridLayout>` replace the comment `<!-- Add your page content here -->` with
 
