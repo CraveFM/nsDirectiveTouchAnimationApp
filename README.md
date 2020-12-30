@@ -451,5 +451,19 @@ When using iOS
 ```
 CONSOLE ERROR: ERROR Error: Response content may not be converted to an Image
 ```
+
+```typescript
+  transform(url: string): Observable<ImageSource> {
+    let image: Promise<ImageSource> = Http.getImage({
+      // headers: {
+      //   Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
+      // },
+      url: url,
+      method: 'GET',
+    })
+    return from( image )
+  }
+```
+
 <img src="docs/directive-result.png" width="412" height="438" ></img>
 
