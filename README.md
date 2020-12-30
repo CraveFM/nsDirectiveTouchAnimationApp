@@ -302,4 +302,10 @@ to :
 </ActionBar>
 ```
 
-:bulb: You ccan notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
+:bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
+
+:x: Pipes
+
+https://nativescripting.com/posts/how-to-display-protected-images
+
+
