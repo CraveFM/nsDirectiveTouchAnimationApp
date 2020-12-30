@@ -341,7 +341,7 @@ to :
 
 :bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
 
-<img src="docs/directive-results.png" width=412 height=438></img>
+<img src="docs/directive-results.png" width="412" height="438" ></img>
 
 :x: Pipes
 
