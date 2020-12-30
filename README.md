@@ -280,15 +280,26 @@ to :
 $ cp -r fonts src/fonts
 ```
 
-- [ ] `Font Awesome` Settings
+- [ ] `Font Awesome` [Settings](https://docs.nativescript.org/ui/components/icon-fonts#platform-specific-font-recognition)
 
-* In the `app.css` file, add the `fonts` `.fa` class
+* In the `app.css` file, add the `fonts` `.fa?` classes
 
 ```css
-.fa {
-    font-family: 'FontAwesome'
-  }
+.far {
+  font-family: "Font Awesome 5 Free", "fa-regular-400";
+}
 
+.fab {
+  font-family: "Font Awesome 5 Brands", "fa-brands-400";
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+.ico {
+  font-family: "IcoMoon-Free";
+}
 ```
 
 :round_pushpin: `HomeComponent` Template
