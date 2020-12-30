@@ -1,5 +1,5 @@
 
-# Apple Card 3D App
+# Directive Touch Animation App
 
 <img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img> Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto](https://twitter.com/williamjuan27)
 
