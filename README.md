@@ -309,3 +309,7 @@ to :
 https://nativescripting.com/posts/how-to-display-protected-images
 
 
+```
+$ ng generate pipe pipes/protectedImage --skip-tests=true
+```
+
