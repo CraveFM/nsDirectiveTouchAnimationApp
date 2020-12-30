@@ -316,10 +316,6 @@ $ rm -rf fontawesome-free-5.15.1-web
 .fas {
   font-family: "Font Awesome 5 Free", "fa-solid-900";
 }
-
-.ico {
-  font-family: "IcoMoon-Free";
-}
 ```
 
 :round_pushpin: `HomeComponent` Template
@@ -338,8 +334,8 @@ to :
 
 ```xml
 <ActionBar>
-    <Label *nsIfAndroid text="&#xf17b;" class="fa t-36"></Label>
-    <Label *nsIfIos     text="&#xf179;" class="fa t-36"></Label>
+    <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+    <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
 </ActionBar>
 ```
 
