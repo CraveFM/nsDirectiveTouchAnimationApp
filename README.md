@@ -367,7 +367,7 @@ to :
 
 [ `f179` Apple Icon](https://fontawesome.com/icons/apple)
 
-:x: Pipes
+## :ab: Pipes
 
 https://nativescripting.com/posts/how-to-display-protected-images
 
