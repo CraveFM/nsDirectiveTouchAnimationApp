@@ -23,7 +23,7 @@ $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank
 
 - [ ] Create a `NSPlayground` directory 
 
-- [ ] Download the old {N} 6.0 project from [play](https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7)
+- [ ] Download the old {N} 6.0 project from [Playground](https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7)
 
 - [ ] Move the `NSPlayground.zip` file to the `NSPlayground` directory in the project
 
