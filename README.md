@@ -1,23 +1,29 @@
 
-# Apple Card 3D App
+# Directive Touch Animation App
 
-<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img> Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]()
+<img src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png" width="31" height="31"></img> Adding [Animations using Angular Attibute Directives](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto](https://twitter.com/williamjuan27)
 
 [<img src="https://nativescripting.com/758edc112b99236de995159be8c7567b/directive-animation.gif" width="210" height="375"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49)
 
-Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]() and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
+Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto](https://twitter.com/williamjuan27) and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
 
 ## :o: Create a project by using this template
+
+```
+$ ns create nsDirectiveTouchAnimationApp --template https://github.com/CraveFM/nsDirectiveTouchAnimationApp
+```
+
+## :bookmark: Create a project from Scratch
 
 ```
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:o: Setup 
+:gear: Reverse Engineering from [William TjondroSuharto](https://twitter.com/williamjuan27)'s Example
 
 - [ ] Create a `NSPlayground` directory 
 
-- [ ] Download the old {N} 6.0 project from [play](https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7)
+- [ ] Download the old {N} 6.0 project from [Playground](https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7)
 
 - [ ] Move the `NSPlayground.zip` file to the `NSPlayground` directory in the project
 
@@ -44,7 +50,9 @@ const copyTargets = [
   ];
 ```
 
-## :a: TouchScaleAnimation Attribute Directive
+### :a: TouchScaleAnimation Attribute Directive
+
+### :m: The directives
 
 https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
 
@@ -148,7 +156,7 @@ it needs to be moved to the `Home` Module Class
   }
 ```
 
-## :b: Home Component
+### :m: Home Component
 
 :round_pushpin: Styles
 
@@ -182,7 +190,7 @@ it needs to be moved to the `Home` Module Class
 
 :round_pushpin: Template
 
-- [ ] Let finish with the XML template
+- [ ] Let's finish with the XML template
 
 * In the current `<GridLayout>` replace the comment `<!-- Add your page content here -->` with
 
@@ -222,7 +230,7 @@ it needs to be moved to the `Home` Module Class
     }
 ```
 
-## :ab: ActionBar Structural Directive
+## :b: ActionBar Structural Directive
 
 We will follow the {N} [Ng Directives](https://docs.nativescript.org/angular/ui/ng-components/ng-directives) example and change the `ActionBar` of the `HomeComponent` template
 
@@ -243,7 +251,7 @@ $ ng generate directive directives/ifIos --skip-tests=true
 
 - [ ] Change the constructors
 
-change the constructor from :
+change the constructors from :
 
 ```typescript
   constructor() { }
@@ -251,37 +259,79 @@ change the constructor from :
 
 to : 
 
-:bulb: change the platform accordingly for testing `iOS` it's `isIOS` and `Android` it's `isAndroid`
+```typescript
+  constructor(private container: ViewContainerRef, private templateRef: TemplateRef<View>) { }
+```
+
+- [ ] Implements the 'OnInit' lifecycle along with its `ngOnInit()` method
 
 ```typescript
-  constructor(container: ViewContainerRef, templateRef: TemplateRef<View>) {
-    if (isIOS) {
-        container.createEmbeddedView(templateRef);
+....     implements OnInit {
+
+  ngOnInit() {
+    if (isAndroid) {
+      this.container.createEmbeddedView(this.templateRef);
     }
   }
 ```
 
-:round_pushpin: `HomeComponent` Template
+
+:bulb: change the platform accordingly for testing `iOS` it's `isIOS` and `Android` it's `isAndroid`
 
 
-- [ ] `Font Awesome` Fonts
 
-* locate and copy the `fonts` folder to the `src` directory
+:gear: `Fonts` settings
+
+To demonstrate the platform segragation, using `Font Awesome` Fonts to display the respective platform icon will be useful
+
+
+- [ ] `Font Awesome` 5.15.1 Fonts
+
+* Download the [fontawesome-free-5.15.1-web.zip](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip) file from github 
+
+* unzip the file which should be installed in the `~/Downloads` directory
 
 ```
-$ cp -r fonts src/fonts
+$ unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
 ```
 
-- [ ] `Font Awesome` Settings
+* create the `fonts` directory
 
-* In the `app.css` file, add the `fonts` `.fa` class
+```
+$ mkdir src/fonts
+```
+
+* install the `fonts` files
+
+```
+$ cp fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
+```
+
+* clean up the zip file
+
+```
+$ rm -rf fontawesome-free-5.15.1-web
+```
+
+- [ ] `Font Awesome` [Settings](https://docs.nativescript.org/ui/components/icon-fonts#platform-specific-font-recognition)
+
+* In the `app.css` file, add the `fonts` `.fa?` classes
 
 ```css
-.fa {
-    font-family: 'FontAwesome'
-  }
+.far {
+  font-family: "Font Awesome 5 Free", "fa-regular-400";
+}
 
+.fab {
+  font-family: "Font Awesome 5 Brands", "fa-brands-400";
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
 ```
+
+:round_pushpin: `HomeComponent` Template
 
 - [ ] `HomeComponent` Action Bar
 
@@ -297,15 +347,128 @@ to :
 
 ```xml
 <ActionBar>
-    <Label *nsIfAndroid text="&#xf17b;" class="fa t-36"></Label>
-    <Label *nsIfIos     text="&#xf179;" class="fa t-36"></Label>
+    <StackLayout orientation="horizontal">
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
 </ActionBar>
 ```
 
 :bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
 
+[ `f17b` Android Icon](https://fontawesome.com/icons/android)
+
+[ `f179` Apple Icon](https://fontawesome.com/icons/apple)
+
 :x: Pipes
 
 https://nativescripting.com/posts/how-to-display-protected-images
 
+:round_pushpin: `protectedImage` Pipe
+
+```
+$ ng generate pipe pipes/protectedImage --skip-tests=true
+```
+
+- [ ] Replace the ccurrent `transform` method
+
+```typesccript
+  transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+```
+
+by 
+
+```typescript
+  transform(url: string): Observable<ImageSource> {
+    let image: Promise<ImageSource> = Http.getImage({
+      headers: {
+        Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
+      },
+      url: url,
+      method: 'GET',
+    })
+    return from( image )
+  }
+```
+
+along with
+
+```typescript
+  getToken(): string {
+    // access token
+    return "qgk2+6Sv9/oM7G3qLEjTH1a1l1g=";
+  }
+```
+
+:round_pushpin: `HomeComponent` Component
+
+- [ ] `HomeComponent` class add the `imageUrl` instance variable
+
+```typescript
+    imageUrl: string = "https://raw.githubusercontent.com/CraveFM/nsDirectiveTouchAnimationApp/main/src/images/angular.png";
+
+```
+
+- [ ] `HomeComponent` Action Bar in the `HomeComponent` template
+
+* In the `home.component.html` file add the `Image` tag in the `ActionBar` tag from :
+
+```xml
+<ActionBar>
+    <StackLayout orientation="horizontal">
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
+</ActionBar>
+```
+
+to :
+
+```xml
+<ActionBar>
+    <StackLayout orientation="horizontal">
+        <Image [src]="imageUrl | protectedImage | async" width="50" height="50"></Image>    
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
+</ActionBar>
+```
+
+:x: Error
+
+You will get an error (console error):
+
+* When running with Android `$ ns run android`
+```
+JS: ERROR Error: Response content may not be converted to an Image
+```
+
+* When using iOS `$ ns run android`
+```
+CONSOLE ERROR: ERROR Error: Response content may not be converted to an Image
+```
+
+:bulb: to fix the issue, comment the `headers` filed in the `Http.getImage` JSON field like below:
+
+```typescript
+  transform(url: string): Observable<ImageSource> {
+    let image: Promise<ImageSource> = Http.getImage({
+      // headers: {
+      //   Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
+      // },
+      url: url,
+      method: 'GET',
+    })
+    return from( image )
+  }
+```
+
+You should see something similar to this
+
+<img src="docs/directive-result.png" width="412" height="438" ></img>
 
