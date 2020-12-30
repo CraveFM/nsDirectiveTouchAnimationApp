@@ -365,6 +365,7 @@ to :
 
 https://nativescripting.com/posts/how-to-display-protected-images
 
+:round_pushpin: `protectedImage` Pipe
 
 ```
 $ ng generate pipe pipes/protectedImage --skip-tests=true
@@ -394,5 +395,61 @@ by
   }
 ```
 
+along with
+
+```typescript
+  getToken(): string {
+    // access token
+    return "qgk2+6Sv9/oM7G3qLEjTH1a1l1g=";
+  }
+```
+
+:round_pushpin: `HomeComponent` Component
+
+- [ ] `HomeComponent` class add the `imageUrl` instance variable
+
+```typescript
+    imageUrl: string = "https://raw.githubusercontent.com/CraveFM/nsDirectiveTouchAnimationApp/main/src/images/angular.png";
+
+```
+
+- [ ] `HomeComponent` Action Bar in the `HomeComponent` template
+
+* In the `home.component.html` file add the `Image` tag in the `ActionBar` tag from :
+
+```xml
+<ActionBar>
+    <StackLayout orientation="horizontal">
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
+</ActionBar>
+```
+
+to :
+
+```xml
+<ActionBar>
+    <StackLayout orientation="horizontal">
+        <Image [src]="imageUrl | protectedImage | async" width="50" height="50"></Image>    
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
+</ActionBar>
+```
+
+:x: Error
+
+When using Android
+```
+JS: ERROR Error: Response content may not be converted to an Image
+```
+
+When using iOS
+```
+CONSOLE ERROR: ERROR Error: Response content may not be converted to an Image
+```
 <img src="docs/directive-result.png" width="412" height="438" ></img>
 
