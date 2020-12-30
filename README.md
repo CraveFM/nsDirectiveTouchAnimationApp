@@ -442,15 +442,19 @@ to :
 
 :x: Error
 
-When using Android
+You will get an error (console error):
+
+* When running with Android `$ ns run android`
 ```
 JS: ERROR Error: Response content may not be converted to an Image
 ```
 
-When using iOS
+* When using iOS `$ ns run android`
 ```
 CONSOLE ERROR: ERROR Error: Response content may not be converted to an Image
 ```
+
+:bulb: to fix the issue, comment the `headers` filed in the `Http.getImage` JSON field like below:
 
 ```typescript
   transform(url: string): Observable<ImageSource> {
@@ -464,6 +468,8 @@ CONSOLE ERROR: ERROR Error: Response content may not be converted to an Image
     return from( image )
   }
 ```
+
+You should see something similar to this
 
 <img src="docs/directive-result.png" width="412" height="438" ></img>
 
