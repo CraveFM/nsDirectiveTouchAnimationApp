@@ -50,6 +50,12 @@ const copyTargets = [
   ];
 ```
 
+:round_pushpin: Angular CLI schematics generation tools
+
+```
+$ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
+```
+
 ### :a: TouchScaleAnimation Attribute Directive
 
 ### :m: The directives
