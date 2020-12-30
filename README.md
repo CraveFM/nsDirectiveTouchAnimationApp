@@ -313,3 +313,26 @@ https://nativescripting.com/posts/how-to-display-protected-images
 $ ng generate pipe pipes/protectedImage --skip-tests=true
 ```
 
+- [ ] Replace the ccurrent `transform` method
+
+```typesccript
+  transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+```
+
+by 
+
+```typescript
+  transform(url: string): Observable<ImageSource> {
+    return from(
+      Http.getImage({
+        headers: {
+          Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
+        },
+        url: url,
+        method: 'GET',
+      })
+    )
+  }
+```
