@@ -274,10 +274,19 @@ to :
 
 - [ ] `Font Awesome` Fonts
 
-* [download](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip), unzip and copy the `fonts` folder to the `src` directory
+```
+$ mkdir src/fonts
+```
+
+* [download](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip), unzip and copy the `.ttf` font files in the `webfonts` folder to the `src` directory
 
 ```
-$ cp -r fonts src/fonts
+$ unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
+```
+
+
+```
+$ cp ~/Downloads/fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
 ```
 
 - [ ] `Font Awesome` [Settings](https://docs.nativescript.org/ui/components/icon-fonts#platform-specific-font-recognition)
