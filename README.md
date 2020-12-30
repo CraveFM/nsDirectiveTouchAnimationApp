@@ -274,7 +274,7 @@ to :
 
 - [ ] `Font Awesome` Fonts
 
-* download and copy the `fonts` folder to the `src` directory
+* [download](fontawesome-free-5.15.1-web.zip), unzip and copy the `fonts` folder to the `src` directory
 
 ```
 $ cp -r fonts src/fonts
