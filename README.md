@@ -334,14 +334,15 @@ to :
 
 ```xml
 <ActionBar>
-    <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
-    <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    <StackLayout orientation="horizontal">
+        <Label text="on" class="fab t-12"></Label>
+        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+    </StackLayout>
 </ActionBar>
 ```
 
 :bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
-
-<img src="docs/directive-result.png" width="412" height="438" ></img>
 
 :x: Pipes
 
@@ -375,3 +376,6 @@ by
     )
   }
 ```
+
+<img src="docs/directive-result.png" width="412" height="438" ></img>
+
