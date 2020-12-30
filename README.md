@@ -10,7 +10,7 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 ## :o: Create a project by using this template
 
 ```
-$ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
+$ ns create nsDirectiveTouchAnimationApp --template https://github.com/CraveFM/nsDirectiveTouchAnimationApp
 ```
 
 ## :a: Create a project from Scratch
@@ -19,7 +19,7 @@ $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:gear: Reverse Engineering from [William TjondroSuharto](https://twitter.com/williamjuan27) Example
+:gear: Reverse Engineering from [William TjondroSuharto](https://twitter.com/williamjuan27)'s Example
 
 - [ ] Create a `NSPlayground` directory 
 
@@ -50,7 +50,7 @@ const copyTargets = [
   ];
 ```
 
-## :a: TouchScaleAnimation Attribute Directive
+### :one: TouchScaleAnimation Attribute Directive
 
 https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
 
@@ -154,7 +154,7 @@ it needs to be moved to the `Home` Module Class
   }
 ```
 
-## :b: Home Component
+### :two: Home Component
 
 :round_pushpin: Styles
 
@@ -228,7 +228,7 @@ it needs to be moved to the `Home` Module Class
     }
 ```
 
-## :ab: ActionBar Structural Directive
+## :b: ActionBar Structural Directive
 
 We will follow the {N} [Ng Directives](https://docs.nativescript.org/angular/ui/ng-components/ng-directives) example and change the `ActionBar` of the `HomeComponent` template
 
