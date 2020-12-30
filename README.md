@@ -383,15 +383,14 @@ by
 
 ```typescript
   transform(url: string): Observable<ImageSource> {
-    return from(
-      Http.getImage({
-        headers: {
-          Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
-        },
-        url: url,
-        method: 'GET',
-      })
-    )
+    let image: Promise<ImageSource> = Http.getImage({
+      headers: {
+        Authorization: `Bearer ${this.getToken()}`, // or whatever additional headers that needs to be passed in
+      },
+      url: url,
+      method: 'GET',
+    })
+    return from( image )
   }
 ```
 
