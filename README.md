@@ -272,21 +272,32 @@ to :
 :gear: `Fonts` settings
 
 
-- [ ] `Font Awesome` Fonts
+- [ ] `Font Awesome` 5.15.1 Fonts
 
-```
-$ mkdir src/fonts
-```
+* Download the [fontawesome-free-5.15.1-web.zip](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip) file from github 
 
-* [download](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip), unzip and copy the `.ttf` font files in the `webfonts` folder to the `src` directory
+* unzip the file which should be installed in the `~/Downloads` directory
 
 ```
 $ unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
 ```
 
+* create the `fonts` directory
 
 ```
-$ cp ~/Downloads/fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
+$ mkdir src/fonts
+```
+
+* install the `fonts` files
+
+```
+$ cp fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
+```
+
+* clean up the zip file
+
+```
+$ rm -rf fontawesome-free-5.15.1-web
 ```
 
 - [ ] `Font Awesome` [Settings](https://docs.nativescript.org/ui/components/icon-fonts#platform-specific-font-recognition)
