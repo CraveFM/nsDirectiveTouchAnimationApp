@@ -5,7 +5,7 @@
 
 [<img src="https://nativescripting.com/758edc112b99236de995159be8c7567b/directive-animation.gif" width="210" height="375"></img>](https://play.nativescript.org/?template=play-ng&id=Wh9rvG&v=49)
 
-Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto]() and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
+Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com/posts/animations-using-angular-directives) by [William TjondroSuharto](https://twitter.com/williamjuan27) and can be used as a template since it has already been converted to [NativeScript 7](https://nativescript.org/blog/nativescript-7-announcement)
 
 ## :o: Create a project by using this template
 
@@ -19,7 +19,7 @@ $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:gear: Reverse Engineering from [William TjondroSuharto]() Example
+:gear: Reverse Engineering from [William TjondroSuharto](https://twitter.com/williamjuan27) Example
 
 - [ ] Create a `NSPlayground` directory 
 
