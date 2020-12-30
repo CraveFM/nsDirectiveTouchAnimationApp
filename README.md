@@ -282,6 +282,8 @@ to :
 
 :gear: `Fonts` settings
 
+To demonstrate the platform segragation, using `Font Awesome` Fonts to display the respective platform icon will be useful
+
 
 - [ ] `Font Awesome` 5.15.1 Fonts
 
