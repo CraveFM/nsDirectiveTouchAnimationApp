@@ -13,7 +13,7 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
-:o: Setup 
+## :gear: Reverse Engineering from [William TjondroSuharto]() Example
 
 - [ ] Create a `NSPlayground` directory 
 
