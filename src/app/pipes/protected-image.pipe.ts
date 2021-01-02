@@ -1,7 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ImageSource, Http } from '@nativescript/core';
 import { from, Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 @Pipe({
   name: 'protectedImage'
