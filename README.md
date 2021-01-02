@@ -29,25 +29,12 @@ $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank
 
     `mv ~/Downloads/NSPlayground.zip NSPlayground`
 
-- [ ] Images
+- [ ] Assets
 
-* copy `images` folder to the `src` directory by renaming the original `assets` directory
+* copy `assets` folder to the `src` directory
 
 ```
-$ cp -r NSPlayground/app/assets src/images
-```
-
-- [ ] Edit `webpack.config.js` file
-
-* locate the `copyTargets` variable and add the `from: 'images/**'` JSON section like below
-
-```javascript
-const copyTargets = [
-    { from: 'assets/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    { from: 'fonts/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    { from: 'images/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    ...copyReplacements
-  ];
+$ cp -r NSPlayground/app/assets src
 ```
 
 :round_pushpin: Angular CLI schematics generation tools
