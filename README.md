@@ -323,10 +323,10 @@ $ rm -rf fontawesome-free-5.15.1-web
 }
 ```
 
-- [ ] Check the Fonts
+- [ ] Check that the Fonts are correctly installed
 
 ```
-% ns fonts
+$ ns fonts
 Error while loading nativescript-cloud is: Default commands should be required before child commands
 ┌────────────────────┬──────────────────────────────────────────────────────────────────────────┐
 │ Font               │ CSS Properties                                                           │
