@@ -323,6 +323,19 @@ $ rm -rf fontawesome-free-5.15.1-web
 }
 ```
 
+- [ ] Check the Fonts
+
+```
+% ns fonts
+Error while loading nativescript-cloud is: Default commands should be required before child commands
+┌────────────────────┬──────────────────────────────────────────────────────────────────────────┐
+│ Font               │ CSS Properties                                                           │
+│ fa-brands-400.ttf  │ font-family: "Font Awesome 5 Brands", "fa-brands-400"; font-weight: 400; │
+│ fa-regular-400.ttf │ font-family: "Font Awesome 5 Free", "fa-regular-400"; font-weight: 400;  │
+│ fa-solid-900.ttf   │ font-family: "Font Awesome 5 Free", "fa-solid-900"; font-weight: 900;    │
+└────────────────────┴──────────────────────────────────────────────────────────────────────────┘
+```
+
 :round_pushpin: `HomeComponent` Template
 
 - [ ] `HomeComponent` Action Bar
