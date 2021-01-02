@@ -400,8 +400,7 @@ along with
 - [ ] `HomeComponent` class add the `imageUrl` instance variable
 
 ```typescript
-    imageUrl: string = "https://raw.githubusercontent.com/CraveFM/nsDirectiveTouchAnimationApp/main/src/images/angular.png";
-
+    imageUrl: string = "https://raw.githubusercontent.com/CraveFM/nsDirectiveTouchAnimationApp/main/src/assets/angular.png";
 ```
 
 - [ ] `HomeComponent` Action Bar in the `HomeComponent` template
