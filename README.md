@@ -362,9 +362,10 @@ to :
 
 :bulb: You can notice the two `structural` directives (preceded by a `*` ) `*nsIfAndroid` and `*nsIfIos`
 
-[ `f17b` Android Icon](https://fontawesome.com/icons/android)
-
-[ `f179` Apple Icon](https://fontawesome.com/icons/apple)
+| Unicode                                          | Icon    |
+|--------------------------------------------------|---------|
+| [`f17b`](https://fontawesome.com/icons/android)  | Android |
+| [`f179`](https://fontawesome.com/icons/apple)    |  Apple  |      
 
 ## :ab: Pipes
 
