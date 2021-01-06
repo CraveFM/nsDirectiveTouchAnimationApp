@@ -477,3 +477,10 @@ You should see something similar to this
 
 <img src="docs/directive-result.png" width="412" height="438" ></img>
 
+
+# More ?
+
+Shadow for iOS and Android to put in directives
+
+https://dev.to/mudlabs/shadows-in-nativescript-2di9
+
