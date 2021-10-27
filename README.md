@@ -258,11 +258,11 @@ We will follow the {N} [Ng Directives](https://docs.nativescript.org/angular/ui/
 - [ ] Generate the directives for `Android` and `iOS`
 
 ```
-$ ng generate directive directives/ifAndroid --skip-tests=true
+ng generate directive directives/ifAndroid --skip-tests=true
 ```
 
 ```
-$ ng generate directive directives/ifIos --skip-tests=true
+ng generate directive directives/ifIos --skip-tests=true
 ```
 
 :construction: Follow the same directives for fixing the [Visibility Issue](README.md#construction-visibility-issue) when running the directives under a specific module.
@@ -310,25 +310,25 @@ To demonstrate the platform segragation, using `Font Awesome` Fonts to display t
 * unzip the file which should be installed in the `~/Downloads` directory
 
 ```
-$ unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
+unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
 ```
 
 * create the `fonts` directory
 
 ```
-$ mkdir src/fonts
+mkdir src/fonts
 ```
 
 * install the `fonts` files
 
 ```
-$ cp fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
+cp fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
 ```
 
 * clean up the zip file
 
 ```
-$ rm -rf fontawesome-free-5.15.1-web
+rm -rf fontawesome-free-5.15.1-web
 ```
 
 - [ ] `Font Awesome` [Settings](https://docs.nativescript.org/ui/components/icon-fonts#platform-specific-font-recognition)
@@ -400,7 +400,7 @@ https://nativescripting.com/posts/how-to-display-protected-images
 :round_pushpin: `protectedImage` Pipe
 
 ```
-$ ng generate pipe pipes/protectedImage --skip-tests=true
+ng generate pipe pipes/protectedImage --skip-tests=true
 ```
 
 - [ ] Replace the ccurrent `transform` method
