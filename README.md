@@ -45,7 +45,9 @@ cp -r NSPlayground/app/assets src
 npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
-```
+- [ ] Create the `angular.json` file
+
+```json
 cat <<EOF > angular.json
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
