@@ -10,13 +10,13 @@ Example taken from [:bookmark:`nativescripting.com`](https://nativescripting.com
 ## :o: Create a project by using this template
 
 ```
-$ ns create nsDirectiveTouchAnimationApp --template https://github.com/CraveFM/nsDirectiveTouchAnimationApp
+ns create nsDirectiveTouchAnimationApp --template https://github.com/CraveFM/nsDirectiveTouchAnimationApp
 ```
 
 ## :bookmark: Create a project from Scratch
 
 ```
-$ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
+ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-ng
 ```
 
 :gear: Reverse Engineering from [William TjondroSuharto](https://twitter.com/williamjuan27)'s Example
@@ -27,20 +27,22 @@ $ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank
 
 - [ ] Move the `NSPlayground.zip` file to the `NSPlayground` directory in the project
 
-    `mv ~/Downloads/NSPlayground.zip NSPlayground`
+```
+mv ~/Downloads/NSPlayground.zip NSPlayground
+```
 
 - [ ] Assets
 
 * copy `assets` folder to the `src` directory
 
 ```
-$ cp -r NSPlayground/app/assets src
+cp -r NSPlayground/app/assets src
 ```
 
 :round_pushpin: Angular CLI schematics generation tools
 
 ```
-$ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
+npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
 ### :a: TouchScaleAnimation Attribute Directive
@@ -54,7 +56,7 @@ The basic difference between a component and a directive is that a component has
 - [ ] Generate the directive
 
 ```
-$ ng generate directive directives/TouchScaleAnimation --skip-tests=true
+ng generate directive directives/TouchScaleAnimation --skip-tests=true
 ```
 
 #### :construction: Visibility Issue!
