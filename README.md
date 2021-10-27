@@ -94,13 +94,11 @@ This will add the `TouchScaleAnimationDirective` class to the `App` Module Class
 
 ```typescript
 @NgModule({
-    imports: [
-        NativeScriptCommonModule,
-        AppRoutingModule
-    ],
-    declarations: [
-        AppComponent,
-        TouchScaleAnimationDirective
+  bootstrap: [AppComponent],
+  imports: [NativeScriptModule, AppRoutingModule],
+  declarations: [AppComponent, TouchScaleAnimationDirective],
+  schemas: [NO_ERRORS_SCHEMA],
+})
 ...
 ```
 
@@ -108,13 +106,10 @@ it needs to be moved to the `Home` Module Class
 
 ```typescript
 @NgModule({
-    imports: [
-        NativeScriptCommonModule,
-        HomeRoutingModule
-    ],
-    declarations: [
-        HomeComponent,
-        TouchScaleAnimationDirective
+  imports: [NativeScriptCommonModule, HomeRoutingModule],
+  declarations: [HomeComponent, TouchScaleAnimationDirective],
+  schemas: [NO_ERRORS_SCHEMA],
+})
 ...
 ```
 
