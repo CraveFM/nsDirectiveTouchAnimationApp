@@ -405,7 +405,7 @@ ng generate pipe pipes/protectedImage --skip-tests=true
 
 - [ ] Replace the ccurrent `transform` method
 
-```typesccript
+```typescript
   transform(value: unknown, ...args: unknown[]): unknown {
     return null;
   }
