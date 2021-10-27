@@ -28,7 +28,7 @@ ns create nsDirectiveTouchAnimationApp --template @nativescript/template-blank-n
 - [ ] Move the `NSPlayground.zip` file to the `NSPlayground` directory in the project
 
 ```
-mv ~/Downloads/NSPlayground.zip NSPlayground
+unzip ~/Downloads/NSPlayground.zip -d NSPlayground
 ```
 
 - [ ] Assets
