@@ -403,6 +403,9 @@ https://nativescripting.com/posts/how-to-display-protected-images
 ng generate pipe pipes/protectedImage --skip-tests=true
 ```
 
+:construction: Follow the same directives for fixing the [Visibility Issue](README.md#construction-visibility-issue) when running the directives under a specific module.
+
+
 - [ ] Replace the ccurrent `transform` method
 
 ```typescript
