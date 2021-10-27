@@ -59,7 +59,7 @@ cat <<EOF > angular.json
   "projects": {
     "project-name": {
       "root": "",
-      "sourceRoot": ".",
+      "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
