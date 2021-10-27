@@ -45,6 +45,33 @@ cp -r NSPlayground/app/assets src
 npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
+```
+cat <<EOF > angular.json
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  },
+  "projects": {
+    "project-name": {
+      "root": "",
+      "sourceRoot": ".",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "defaultProject": "project-name"
+}
+EOF
+```
+
 ### :a: TouchScaleAnimation Attribute Directive
 
 ### :m: The directives
