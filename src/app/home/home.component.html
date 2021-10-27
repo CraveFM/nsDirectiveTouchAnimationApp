@@ -1,32 +1,32 @@
 <ActionBar>
-    <StackLayout orientation="horizontal">
-        <Image [src]="imageUrl | protectedImage | async" width="50" height="50"></Image>
-        <Label text="on" class="fab t-12"></Label>
-        <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
-        <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
-    </StackLayout>
+  <StackLayout orientation="horizontal">
+      <Image [src]="imageUrl | protectedImage | async" width="50" height="50"></Image>  
+      <Label text="on" class="fab t-12"></Label>
+      <Label *nsIfAndroid text="&#xf17b;" class="fab t-36"></Label>
+      <Label *nsIfIos     text="&#xf179;" class="fab t-36"></Label>
+  </StackLayout>
 </ActionBar>
 
 <GridLayout>
-    <ScrollView>
-        <StackLayout class="container">
-            <StackLayout [nsTouchScaleAnimation] class="cards"
-                (tap)="onCardTap(1)">
-                <Image src="~/assets/img1.png" width="200"
-                    stretch="aspectFit"></Image>
-            </StackLayout>
-
-            <StackLayout [nsTouchScaleAnimation] class="cards"
-                (tap)="onCardTap(2)">
-                <Image src="~/assets/img2.png" width="200"
-                    stretch="aspectFit"></Image>
-            </StackLayout>
-
-            <StackLayout [nsTouchScaleAnimation] class="cards"
-                (tap)="onCardTap(3)">
-                <Image src="~/assets/img3.png" width="200"
-                    stretch="aspectFit"></Image>
-            </StackLayout>
+  <ScrollView>
+    <StackLayout class="container">
+        <StackLayout [nsTouchScaleAnimation] class="cards"
+            (tap)="onCardTap(1)">
+            <Image src="~/assets/img1.png" width="200"
+                stretch="aspectFit"></Image>
         </StackLayout>
-    </ScrollView>
+
+        <StackLayout [nsTouchScaleAnimation] class="cards"
+            (tap)="onCardTap(2)">
+            <Image src="~/assets/img2.png" width="200"
+                stretch="aspectFit"></Image>
+        </StackLayout>
+
+        <StackLayout [nsTouchScaleAnimation] class="cards"
+            (tap)="onCardTap(3)">
+            <Image src="~/assets/img3.png" width="200"
+                stretch="aspectFit"></Image>
+        </StackLayout>
+    </StackLayout>
+  </ScrollView>
 </GridLayout>

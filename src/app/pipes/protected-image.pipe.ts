@@ -1,13 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ImageSource, Http } from '@nativescript/core';
-import { from, Observable, of } from 'rxjs';
+import { Http, ImageSource } from '@nativescript/core';
+import { from, Observable } from 'rxjs';
 
 @Pipe({
   name: 'protectedImage'
 })
 export class ProtectedImagePipe implements PipeTransform {
-
-  constructor() {}
 
   transform(url: string): Observable<ImageSource> {
     let image: Promise<ImageSource> = Http.getImage({
